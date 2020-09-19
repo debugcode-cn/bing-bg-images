@@ -2,6 +2,7 @@ const fs = require('fs');
 const https = require('https');
 const URL = require('url');
 const events = require('events');
+const path = require('path');
 
 const { formatDate, formatSize } = require('./format.js');
 const schedule = require('node-schedule');
@@ -16,7 +17,7 @@ exports.downloadBingBGI = function(){
             https.get(url,(res)=>{
                 let date_string =  formatDate().toDate();
                 console.log('date_string',date_string)
-                res.pipe(fs.createWriteStream('./bing-'+date_string+'.jpg'))
+                res.pipe(fs.createWriteStream(path.join(__dirname,'images','bing-'+date_string+'.jpg')))
             });
         })
         res.setEncoding('utf8');
@@ -41,5 +42,5 @@ exports.downloadBingBGI = function(){
     });
 }
 
-let every_day_0 = '0 1 * * * *'
+let every_day_0 = '1 0 0 * * *'
 schedule.scheduleJob(every_day_0, exports.downloadBingBGI);

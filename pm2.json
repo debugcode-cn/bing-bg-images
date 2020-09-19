@@ -1,0 +1,42 @@
+{
+    "apps": [
+        {
+            "name": "download-bing-bg-image",
+            "script": "index.js",
+            "cwd": "./",
+            "args": "",
+            "interpreter": "",
+            "interpreter_args": "",
+            "watch": true,
+            "ignore_watch": [
+                "node_modules",
+                "logs",
+                "test",
+                "images"
+            ],
+            "exec_mode": "cluster",
+            "instances": 1,
+            "max_memory_restart": "1024M",
+            "error_file": "./logs/err.log",
+            "out_file": "./logs/out.log",
+            "merge_logs": true,
+            "log_date_format": "YYYY-MM-DD HH:mm:ss",
+            "min_uptime": "60s",
+            "max_restarts": 1000,
+            "force":true,
+            "autorestart": true,
+            "cron_restart": "",
+            "restart_delay": 1000,
+            "instance_var":"NODE_APP_INSTANCE",
+            "env": {
+               "NODE_ENV": "production",
+            },
+            "env_dev": {
+                "NODE_ENV": "development",
+            },
+            "env_test": {
+                "NODE_ENV": "test",
+            }
+        }
+    ]
+}

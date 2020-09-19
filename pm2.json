@@ -1,7 +1,7 @@
 {
     "apps": [
         {
-            "name": "download-bing-bg-image",
+            "name": "bing-bg-images",
             "script": "index.js",
             "cwd": "./",
             "args": "",

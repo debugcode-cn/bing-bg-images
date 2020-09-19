@@ -1,0 +1,18 @@
+{
+  "name": "bing-bg",
+  "version": "1.0.0",
+  "description": "bing bg",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bing",
+    "bg"
+  ],
+  "author": "wl",
+  "license": "ISC",
+  "dependencies": {
+    "node-schedule": "^1.3.2"
+  }
+}

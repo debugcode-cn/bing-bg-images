@@ -29,13 +29,13 @@
             "restart_delay": 1000,
             "instance_var":"NODE_APP_INSTANCE",
             "env": {
-               "NODE_ENV": "production",
+               "NODE_ENV": "production"
             },
             "env_dev": {
-                "NODE_ENV": "development",
+                "NODE_ENV": "development"
             },
             "env_test": {
-                "NODE_ENV": "test",
+                "NODE_ENV": "test"
             }
         }
     ]
